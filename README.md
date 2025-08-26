@@ -1,0 +1,1 @@
+# Open-Hack-U-2025-Kanazawa-backend
