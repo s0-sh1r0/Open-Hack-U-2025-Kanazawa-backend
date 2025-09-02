@@ -29,6 +29,14 @@ docker exec -it mysql_db bash
 ```
 - こうするとコマンドラインでDBを扱うことができる
 
+#### 補足
+パスワードなど必要な情報は`.env`に書いてあるので参照すること
+
+```bash
+mysql -u user -p 
+```
+- DBコンテナのコマンドラインでこのコードを入力し，その後パスワードを入力することで**MySQL**に入ることができる
+
 ---
 
 ## Djangoの開発方法
@@ -41,3 +49,11 @@ docker exec -it mysql_db bash
 docker exec -it django_app bash
 ```
 - これで通常のように開発ができる
+
+## コンテナの終了方法
+以下のコマンド１つですべてのコンテナを終了させることができる．
+しかし開発データなども飛ぶので，使い所があるかは自分次第
+
+```bash
+docker compose down
+```
