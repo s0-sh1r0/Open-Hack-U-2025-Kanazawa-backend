@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat with OpenAI</title>
+</head>
+<body>
+  <h1>Chat with OpenAI</h1>
+  <h2>アプリの概要を教えてください</h2>
+  <form method="post" action="/chat/">
+    {% csrf_token %}
+    <input type="text" name="message" placeholder="アプリの概要を入力">
+    <button type="submit">送信</button>
+  </form>
+
+  {% if reply %}
+    <h2>OpenAIの返答</h2>
+    <p>{{ reply }}</p>
+    <p>返答は <code>output.md</code> にも保存されています。</p>
+  {% endif %}
+</body>
+</html>
