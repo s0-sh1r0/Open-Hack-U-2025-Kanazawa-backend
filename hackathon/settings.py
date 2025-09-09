@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'github_access',
     'hackathon',
     'django.contrib.admin',
     'django.contrib.auth',
